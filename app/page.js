@@ -3,11 +3,12 @@ import Head from "next/head";
 
 //Import Components
 import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
 import CourseSection from "../components/CourseSection";
 import TestimonialSection from "../components/TestimonialSection";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
 import PricingSection from "../components/PricingSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -28,17 +29,28 @@ export default function Home() {
       {/* Main Content */}
       <main className="bg-gray-100 py-12">
         <div className="container mx-auto">
+          {/* Hero Section */}
+          <HeroSection />
+
           {/* Course Section */}
-          <CourseSection />
+          <div className="py-8">
+            <CourseSection />
+          </div>
 
           {/* Testimonial Section */}
-          <TestimonialSection />
+          <div className="py-8">
+            <TestimonialSection />
+          </div>
 
           {/* Contact Section */}
-          <ContactSection />
+          <div className="py-8">
+            <ContactSection />
+          </div>
 
           {/* Pricing Section */}
-          <PricingSection />
+          <div className="py-8">
+            <PricingSection />
+          </div>
         </div>
       </main>
 
