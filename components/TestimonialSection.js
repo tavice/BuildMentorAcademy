@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-gray-200 py-8 mt-12">
+    <section className="bg-gray-200 py-8 mt-12 bg-gradient-to-r from-gray-400 to-gray-200 px-10 rounded-lg">
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold text-center mb-8">
           What Our Students Say

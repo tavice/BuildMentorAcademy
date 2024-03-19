@@ -28,9 +28,12 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="bg-gray-100 py-12">
+      
         <div className="container mx-auto">
           {/* Hero Section */}
+          <div className="py-8">
           <HeroSection />
+          </div>
 
           {/* Course Section */}
           <div className="py-8">

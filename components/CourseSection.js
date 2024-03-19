@@ -4,9 +4,19 @@ import Image from "next/image";
 
 export default function CourseSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="bg-gradient-to-r from-gray-200 to-gray-400 py-12 rounded-lg">
+        <div className="container mx-auto text-center">
+            <h1 className="text-3xl font-bold mb-4">Our Courses</h1>
+            <p className="text-lg mb-8">
+                Choose from a wide range of courses tailored for construction
+                professionals.
+            </p>
+        </div>
+ 
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gradient-to-r from-gray-200 to-gray-400 py-12 px-10 rounded-lg">
       {/* Course Feature 1 */}
       <div className="bg-white p-6 rounded-lg shadow-md">
+        
         <Image
           src="/course-image-1.jpg"
           alt="Course Image 1"
@@ -58,6 +68,8 @@ export default function CourseSection() {
           lead your teams to success.
         </p>
       </div>
+     
+    </section>
     </section>
   );
 }
