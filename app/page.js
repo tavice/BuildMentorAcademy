@@ -1,3 +1,11 @@
+'use client'
+
+//Import React
+import React from "react";
+import { useState, useEffect } from "react"; 
+
+
+
 import Image from "next/image";
 import Head from "next/head";
 
@@ -10,7 +18,36 @@ import ContactSection from "../components/ContactSection";
 import PricingSection from "../components/PricingSection";
 import Footer from "../components/Footer";
 
+
+
 export default function Home() {
+
+  const URL=process.env.URL;
+
+  const [courses, setCourses] = useState([]);
+  const [testimonies, setTestimonies] = useState([]);
+ 
+
+  useEffect(() => {
+   fetch(URL + "/course")
+      .then((res) => res.json())
+      .then((data) => setCourses(data))
+      .catch((error) => console.log(error));
+
+   fetch(URL + "/testimony")
+      .then((res) => res.json())
+      .then((data) => setTestimonies(data))
+      .catch((error) => console.log(error));
+  }, [
+    URL,
+  ]);
+
+  console.log('testimonies are', testimonies);
+  console.log('course are', courses);
+
+ 
+
+
   return (
     <div>
       <Head>
@@ -42,7 +79,7 @@ export default function Home() {
 
           {/* Testimonial Section */}
           <div className="py-8">
-            <TestimonialSection />
+            <TestimonialSection/>
           </div>
 
           {/* Contact Section */}

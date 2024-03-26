@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CourseSection() {
   return (
-    <section className="bg-gradient-to-r from-gray-200 to-gray-400 py-12 rounded-lg">
+    <section className="bg-gradient-to-r from-gray-200 to-gray-400 py-12 px-10 rounded-lg">
         <div className="container mx-auto text-center">
             <h1 className="text-3xl font-bold mb-4">Our Courses</h1>
             <p className="text-lg mb-8">
