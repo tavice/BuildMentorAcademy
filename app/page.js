@@ -22,28 +22,30 @@ import Footer from "../components/Footer";
 
 export default function Home() {
 
-  const URL=process.env.URL;
+  const URL=process.env.NEXT_PUBLIC_URL;
 
-  const [courses, setCourses] = useState([]);
-  const [testimonies, setTestimonies] = useState([]);
+  // console.log('URL is', URL);
+
+  // const [courses, setCourses] = useState([]);
+  // const [testimonies, setTestimonies] = useState([]);
  
 
-  useEffect(() => {
-   fetch(URL + "/course")
-      .then((res) => res.json())
-      .then((data) => setCourses(data))
-      .catch((error) => console.log(error));
+  // useEffect(() => {
+  //  fetch(URL + "course")
+  //     .then((res) => res.json())
+  //     .then((data) => setCourses(data))
+  //     .catch((error) => console.log(error));
 
-   fetch(URL + "/testimony")
-      .then((res) => res.json())
-      .then((data) => setTestimonies(data))
-      .catch((error) => console.log(error));
-  }, [
-    URL,
-  ]);
+  //  fetch(URL + "testimony")
+  //     .then((res) => res.json())
+  //     .then((data) => setTestimonies(data))
+  //     .catch((error) => console.log(error));
+  // }, [
+  //   URL,
+  // ]);
 
-  console.log('testimonies are', testimonies);
-  console.log('course are', courses);
+  // console.log('testimonies are', testimonies);
+  // console.log('course are', courses);
 
  
 
@@ -74,12 +76,12 @@ export default function Home() {
 
           {/* Course Section */}
           <div className="py-8">
-            <CourseSection />
+            <CourseSection URL={URL} />
           </div>
 
           {/* Testimonial Section */}
           <div className="py-8">
-            <TestimonialSection/>
+            <TestimonialSection URL={URL}/>
           </div>
 
           {/* Contact Section */}
