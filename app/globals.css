@@ -24,31 +24,35 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  position: relative; /* Ensure the body is relatively positioned */
 }
 
-body:after {
-  content: "";
+/* SVG Background */
+.custom-shape-divider-bottom-1711809704 {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-shape-divider-bottom-1711809704 svg {
+  position: relative;
+  display: block;
+  width: calc(180% + 1.3px);
+  height: 50%;
+  transform: rotateY(180deg);
+  z-index: -10;
+}
 
-  svg {
-    width: 100%;
-    height: 100%;
+.custom-shape-divider-bottom-1711809704 .shape-fill {
+  fill: #F5A623CC; /* Adjust the fill color as needed */
+}
 
-    .wave-shape {
-      fill: var(--background-start-rgb); /* Replace with desired fill color */
-      d: M0,0 V40 Q 100,150 200,0 H400 V0 Z;
-    }
-  }
+/* Adjust the SVG path as needed */
+.wave-shape {
+  fill: rgb(var(--background-start-rgb));
+  d: path("M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z");
 }
