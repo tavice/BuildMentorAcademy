@@ -29,7 +29,7 @@ export default function CourseSection(props) {
     fetchData();
   }, [props.URL]); 
 
-  console.log('courses are', courses);
+  //console.log('courses are', courses);
 
   return (
     <section className="bg-gradient-to-r from-gray-200 to-gray-400 py-12 px-10 rounded-lg">
@@ -51,7 +51,7 @@ export default function CourseSection(props) {
           {courses.map((course) => (
             <div key={course._id || course.title} className="bg-white p-6 rounded-lg shadow-md">
               <Image
-                src={course.imageUrl || "/course-image.jpg"} // Default image
+                src={course.image || "/course-image.jpg"} // Default image
                 alt={course.title || "Course Image"}
                 width={500}
                 height={300}
@@ -63,7 +63,7 @@ export default function CourseSection(props) {
                     Enroll Now
                 </button>
                 <p className="text-sm font-bold mt-4">
-                    {course.duration} hours
+                    {course.duration} classe
                 </p>
                 <p className="text-2xl font-bold text-blue-500 mt-4">
                     ${course.price}
