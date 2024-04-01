@@ -29,7 +29,7 @@ function HeroSection() {
       .fromTo(
         ".shape-fill",
         { opacity: 0, scale: 0.8 },
-        { opacity: 0.5, scale: 1, duration: 1, stagger: 0.2 },
+        { opacity: 0.3, scale: 1, duration: 1, stagger: 0.2 },
         "=0.5"
       )
       .fromTo(
@@ -40,7 +40,7 @@ function HeroSection() {
       );
       
     // Set the fill colors of the SVG paths
-    gsap.set(".shape-fill", { fill: gradientFromColor });
+    gsap.set(".shape-fill", { fill: gradientToColor });
     gsap.set(".shape-fill:nth-child(2)", { fill: gradientInBetweenColor });
     gsap.set(".shape-fill:nth-child(3)", { fill: gradientFromColor });
   }, []);
